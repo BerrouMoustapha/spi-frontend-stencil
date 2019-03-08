@@ -1,11 +1,12 @@
-import { Component, State } from "@stencil/core";
+import { Component, State,Prop } from "@stencil/core";
+import { RouterHistory } from '@stencil/router';
 
 @Component({
   tag: "spi-formation",
   styleUrl: "spi-formation.scss"
 })
 export class SpiFormation {
-
+  @Prop() history: RouterHistory;
   @State()
   formations: any;
   componentWillLoad() {
@@ -23,7 +24,7 @@ export class SpiFormation {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(item),
-    }).then(() => {location.href='/formation';}
+    }).then(() => {this.history.goBack();}
     ).catch((error) => {
       alert(' Can not delete ');
       console.error(error);

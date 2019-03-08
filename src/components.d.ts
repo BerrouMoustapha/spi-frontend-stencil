@@ -38,8 +38,12 @@ export namespace Components {
     'match'?: MatchResults;
   }
 
-  interface SpiFormation {}
-  interface SpiFormationAttributes extends StencilHTMLAttributes {}
+  interface SpiFormation {
+    'history': RouterHistory;
+  }
+  interface SpiFormationAttributes extends StencilHTMLAttributes {
+    'history'?: RouterHistory;
+  }
 
   interface SpiHeader {}
   interface SpiHeaderAttributes extends StencilHTMLAttributes {}

@@ -120,7 +120,7 @@ envoyer(){
 return (
 
     <div>
-
+<br/><br/><br/>
 <div class="columns">
              <div class="column is-one-fifth"/>
              <div class="column is-one-third">
@@ -215,7 +215,9 @@ return (
 
             <div class="field is-grouped">
               <div class="control">
+              
                 <button class="button is-success"  type="submit" onClick={()=>this.envoyer()}>Envoyer</button>
+               
               </div>
               <div class="control">
                 <stencil-route-link  url="/formation">
